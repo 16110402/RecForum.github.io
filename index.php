@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
   <title>Welcome to !REC Forum - coding Forum</title>  
-  <style>
+  <!-- <style>
     .text-center{
       border:4px solid;
       border-radius:10px;
@@ -21,7 +21,7 @@
       background-color:blueviolet;
       color: white;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
@@ -57,7 +57,9 @@
   </div>
 
   <div class="container my-3">
-    <h2 class="text-center">Coding - Categories</h1>
+    <!-- <div class="text-center my-3"> -->
+    <h2 class="container text-center" style="color: white;background-color:blueviolet;text-align: center;border:4px solid;border-radius:10px;border-color: lightblue;width: 340px;">Coding - Categories</h2>
+    <!-- </div> -->
       <div class="row my-3">
 
         <!-- Fetch all the categories -->
