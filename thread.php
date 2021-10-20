@@ -11,7 +11,7 @@
 
   <title>welcome to !Discuss - coding Forum</title>
   <style>
-    .text-center{
+    /* .text-center{
       border:4px solid;
       border-radius:10px;
       border-color: lightblue;
@@ -20,7 +20,7 @@
       margin-left: 450px;
       background-color:blueviolet;
       color: white;
-    }
+    } */
     #fh{
       background-image: url("img/SignUp_Image");
       margin:0;
@@ -35,13 +35,13 @@
     }
     .clean{
       top: 10px;
-      font-size: 20px;
+      font-size: 2.5vh;
       /* text-align: center; */
-      line-height: 1.5em;
+      /* line-height: 1.5em; */
       background-color:orange;
-      width:700px;
+      width:100%;
       color: blue;
-      height:220px;
+      /* height:220px; */
       border:2px solid;
       border-radius:10px;
       margin:20px auto 20px auto;
@@ -53,6 +53,18 @@
     #post{
       color:black
     }
+    #usert{
+      border:2px solid;
+      border-radius:10px;
+      max-width: 80vh;
+      text-align: center;
+      margin-left: 50px;
+      background-color:lightskyblue;
+      color: white;
+      /* margin:20px auto 20px auto; */
+      box-shadow:0px 0px 20px blue;
+      color: brown;
+}
   </style>
 </head>
 
@@ -102,7 +114,7 @@
   }
 ?>
 
-  <div class="container my-4">
+  <div class="container">
 
   <div class="jumbotron">
     <div id="uh">
@@ -124,7 +136,7 @@
   <!-- <p class="lead">
     <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
   </p> -->
-  <p id="post">Posted by: <b> <?php echo $posted_by; ?> </b></p>
+  <p id="post">Posted by: <b>  <?php echo $posted_by; ?> </b></p>
  </div>
 </div>
 </div>
@@ -154,7 +166,7 @@ else
 ?>
 
   <div class="container" id="ques">
-  <h1 class="text-center">Discussions</h1>
+  <h1 class="container text-center" style="color: white;background-color:blueviolet;text-align: center;border:4px solid;border-radius:10px;border-color: lightblue;max-width: 50vh;">Discussion</h1>
   <hr>
    <?php
   $id=$_GET['threadid'];
@@ -173,8 +185,8 @@ else
     $row2=mysqli_fetch_assoc($result2);
 
   echo '<div class="media my-3">
-       <img class="mr-3" src="img/user_default.png" width="34px" alt="Generic placeholder image">
-     <div class="media-body my-2">
+       <img class="mr-3 mx-5" src="img/user_default.png" width="34px" alt="Generic placeholder image">
+     <div class="media-body" id="usert">
      <p class="font-weight-bold my-0">'.  $row2['user_email'] .' at '. $comment_time .'</p>
          <h5 class="mt-0">' . $id . '' . $content . '</h5>
         
@@ -182,7 +194,7 @@ else
    </div>';
   }
   if($noResult){
-    echo '<div class="jumbotron jumbotron-fluid">
+    echo '<div class="jumbotron jumbotron-fluid"> 
     <div class="container">
       <h1 class="display-4">No Results Founds</h1>
       <p class="lead">Be the first person to ask the Question</p>

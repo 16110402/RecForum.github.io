@@ -13,12 +13,12 @@
 <style>
   .clean{
       top: 10px;
-      font-size: 20px;
+      font-size: 2.5vh;
       /* text-align: center; */
-      line-height: 1.5em;
+      /* line-height: 1.5em; */
       background-color:lightblue;
-      width:700px;
-      height:220px;
+      width:100%;
+      /* height:220px; */
       border:2px solid;
       border-radius:10px;
       margin:20px auto 20px auto;
@@ -29,19 +29,19 @@
       width: 100%;
       height: 100%;
     }
-    .clean1{
+    /* .clean1{
       top: 10px;
-      font-size: 20px;
+      font-size: 5vh;
       /* text-align: center; */
-      line-height: 1.5em;
-      background-color:orange;
-      width:1080px;
-      height:180px;
-      border:2px solid;
-      border-radius:10px;
-      margin:20px auto 20px auto;
-      box-shadow:0px 0px 20px red;
-    }
+      /* line-height: 1.5em; */
+      /* background-color:orange; */
+      /* width:100%;
+      height:180px; */
+      /* border:2px solid; */
+      /* border-radius:10px; */
+      /* margin:20px auto 20px auto; */
+      /* box-shadow:0px 0px 20px red; */
+    /* } */ 
     body{
     margin:0;
     padding: 0;
@@ -53,7 +53,7 @@
     z-index:-1;
     background-size: cover;
 }
-.text-center{
+/* .text-center{
       border:2px solid;
       border-radius:10px;
       width: 400px;
@@ -61,11 +61,11 @@
       margin-left: 450px;
       background-color:blueviolet;
       color: white;
-}
+} */
 #usert{
-  border:2px solid;
+      border:2px solid;
       border-radius:10px;
-      width: 400px;
+      max-width: 80vh;
       text-align: center;
       margin-left: 50px;
       background-color:lightskyblue;
@@ -126,10 +126,12 @@
   <div class="container my-4">
 
   <div class="jumbotron">
-<div class="clean1">
+    <div class="container" style="top: 10px;font-size: 5vh;background-color:orange;border:2px solid;border-radius:10px;margin:20px auto 20px auto;box-shadow:0px 0px 20px red;">
+<!-- <div class="clean1"> -->
   <h1 class="display-4">Welcome to <?php echo $catname; ?> forums</h1>
   <p class="lead"><?php echo $catdesc; ?></p>
   <hr class="my-4">
+<!-- </div> -->
 </div>
 <div class="clean">
   <ul type="disc">
@@ -176,7 +178,7 @@ else
 }
 ?>
 <div class="dt my-2">
-  <h1 class="text-center">Browse Questions</h1>
+  <h1 class="container text-center" style="color: white;background-color:blueviolet;text-align: center;border:4px solid;border-radius:10px;border-color: lightblue;max-width: 50vh;">Browse Questions</h1>
 <?php
   $id=$_GET['catid'];
   $sql = "SELECT * FROM `rec_threads` WHERE thread_cat_id=$id";
@@ -198,7 +200,7 @@ else
 
   echo '<div class="media my-3">
        <img class="mr-3 mx-5" src="img/user_default.png" width="34px" alt="Generic placeholder image">
-     <div class="media-body my-2" id="usert">
+     <div class="container media-body my-2" id="usert">
      <p class="font-weight-bold my-0">'.  $row2['user_email'] .' at '. $thread_time .'</p>
          <h5 class="mt-0"><a href="thread.php?threadid=' . $id . '">' . $title . '</a></h5>
          ' . $desc . '
